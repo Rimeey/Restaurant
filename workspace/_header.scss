@@ -1,0 +1,76 @@
+.header {
+    background: {
+        image: url(../img/header.png);
+        repeat: no-repeat;
+        size: cover;
+        position: center top;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text p {
+        color: #fff;
+        font: {
+            size: 90px;
+            family: Yeseva One;
+            weight: 400;
+        }
+        text: {
+            shadow: 2px 2px #000;
+            align: center;
+        }
+        max-width: 1069px;
+        padding-top: 212px;
+        margin: 0 auto;
+    }
+    .text img {
+        margin: 58.65px auto 64.19px;
+        display: flex;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 34px;
+        margin-bottom: 100px;
+    }
+    .buttons a {
+        display: block;
+        width: 218;
+        height: 80px;
+        border: 1px solid #FFF;
+        background: rgba(255, 255, 255, 0.60);
+        margin: 0 auto;
+    }
+    .buttons a p {
+        font: {
+            size: 18px;
+            family: Lato;
+            weight: 400;
+        }
+        text: {
+            align: center;
+            transform: uppercase;
+        }
+        color: #FFF;
+        line-height: 22px;
+        padding: 29px;
+    }
+    @include media(768px) {
+        .buttons {
+            flex-direction: column;
+        }
+        .buttons a {
+            width: 334px;
+        }
+    }
+    @include media(540px) {
+        .buttons a {
+            width: 368px;
+        }
+        .text p {
+            font-size: 45px;
+        }
+    }
+}
