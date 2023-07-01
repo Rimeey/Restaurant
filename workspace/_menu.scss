@@ -1,0 +1,145 @@
+.menu {
+    background: {
+        color: lightgray;
+        image: url(../img/menu.png), 
+        linear-gradient(270deg, #FFF 0%, #F3F1F1 100%);
+        blend-mode: overlay;
+        size: cover;
+        repeat: no-repeat;
+    }
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10) inset;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 100px;
+        gap: 30px;
+    }
+    .menu_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 100px;
+    }
+    .menu_item img {
+        margin-top: 24px;
+        width: 250px;
+        height: 23.733px;
+        align-self: center;
+    }
+    .menu_item .lorem {
+        margin: 25px 65px 0px 65px;
+    }
+    .menu_item .high {
+        color: $orange;
+        text-align: center;
+        font: {
+            size: 36px;
+            family: Yeseva One;
+            weight: 400;
+        }
+        margin-top: 30px;
+    }
+    .menu_item .lorem_special {
+        outline: 1px solid $lightorange;
+        outline-offset: 5px;
+        position: relative;
+    }
+    .menu_item .lorem_special::before {
+        content: 'Special';
+        width: 85.447px;
+        height: 22px;
+        background-color: $lightorange;
+        position: absolute;
+        top: -27px;
+        bottom: 0;
+        left: 84.8%;
+        right: 0;
+        color: #fff;
+        text-align: center;
+        font: {
+            size: 14px;
+            family: Roboto;
+            weight: 400;
+        }
+        display: flex;
+        flex-direction:column;
+    }
+    .lorem .gold {
+        display: flex;
+        flex-direction: row;
+        gap: 20vh;
+        border-bottom: 1px solid $lightorange;
+        line-height: 2.5em;
+    }
+    .lorem .gold5 {
+        text-align: left;
+        color: $lightorange;
+        font: {
+            size: 21px;
+            family: Yeseva One;
+            weight: 400;
+            height: 173.25%;
+        }
+    }
+    .lorem .price {
+        text-align: right;
+        color: $lightorange;
+        font: {
+            size: 21px;
+            family: Yeseva One;
+            weight: 400;
+            height: 173.25%;
+        }
+    }
+    .lorem .gold5_bottom {
+        color: $gray;
+        font: {
+            size: 16px;
+            family: Lato;
+            weight: 400;
+        }
+        line-height: 180%;
+    }
+    @include media(920px) {
+        .wrapper {
+            width: 90%;
+        }
+    }
+    @include media(840px) {
+        .wrapper {
+            overflow: hidden;
+        }
+    }
+    @include media(768px) {
+        .wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
+        .menu_item .lorem_special::before {
+            left: 74.7%;
+            width: 163.447px;
+        }
+        .lorem .gold {
+            gap: 27vh;
+        }
+    }
+    @include media(428px) {
+        .menu_item .lorem_special::before {
+            display: none;
+        }
+        .menu_item .lorem_special {
+            outline: none;
+        }
+        .lorem .gold {
+            width: 330px;
+            gap: 30px;
+        }
+        .lorem .gold5 {
+            font-size: 18px;    
+        }
+        .lorem .price {
+            font-size: 16px;
+        }
+    }
+}

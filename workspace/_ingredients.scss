@@ -1,0 +1,94 @@
+.ingredients {
+    background: {
+        image: url(../img/ingredients.png);
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+    .wrapper {
+        padding: 100px 0 100px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .block {
+        width: 629px;
+        height: 550px;
+        margin-right: 76px;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text_top {
+        padding-top: 50px;
+        padding-bottom: 24px;
+        text-align: center;
+        color: #fff;
+        font: {
+            size: 36px;
+            weight: 400;
+            family: Yeseva One;
+        }
+    }
+    .text_bottom {
+        width: 470px;
+        padding-top: 26px;
+        text-align: center;
+        color: #fff;
+        line-height: 180%;
+        letter-spacing: 0.01em;
+        font: {
+            size: 16px;
+            weight: 400;
+            family: Lato;
+        }
+    }
+    .radius {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+    .radius .radius_ {
+        width: 115px;
+        height: 115px;
+        border: 5px solid rgba($color: $orange, $alpha: 0.5);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .radius img {
+        width: 115px;
+        height: 115px;
+        transform: scale(1.5);
+    }
+
+    @include media(768px) {
+        .block {
+            margin-right: 0;
+        }
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @include media(490px) {
+        .block {
+            width: 368px;
+        }
+        .text_bottom {
+            width: 303px;
+            font-size: 16px;
+        }
+        .radius {
+            gap: 21px;
+        }
+        .radius .radius_ {
+            width: 87px;
+            height: 87px;
+        }
+        .radius img {
+            width: 87px;
+            height: 87px;
+        }
+    }
+}

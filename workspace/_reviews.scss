@@ -1,0 +1,69 @@
+.reviews {
+    background: {
+        image: url(../img/reviews.png);
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+    .wrapper {
+        padding: 100px 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block {
+        width: 850px;
+        height: 550px;
+        background-color: rgba(0, 0, 0, 0.80);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block .high {
+        margin-top: 63px;
+        color: #fff;
+        text-align: center;
+        font: {
+            size: 36px;
+            family: Yeseva One;
+            weight: 400;
+        }
+    }
+    .block .text {
+        width: 690px;
+        color: #fff;
+        text-align: center;
+        font: {
+            size: 24px;
+            family: Gentium Book Basic;
+            weight: 700;
+        }
+        line-height: 173.584%;
+        margin-top: 68px;
+        letter-spacing: 0.01em;
+    }
+    .block .food {
+        margin-top: 50px;
+        color: #fff;
+        text-align: center;
+        font: {
+            size: 18px;
+            family: Gentium Book Basic;
+        }
+    }
+
+    @include media(920px) {
+        .block {
+            width: 708px;
+        }
+    }
+    @include media(725px) {
+        .block {
+            width: 368px;
+            height: 726px;
+        }
+        .block .text {
+            width: 318px;
+        }
+    }
+}

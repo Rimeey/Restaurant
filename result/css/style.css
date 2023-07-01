@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.cdnfonts.com/css/gentium-book-basic");
 * {
   margin: 0;
   padding: 0;
@@ -152,6 +154,288 @@ a {
   .about .text .text_bottom {
     width: 359px;
     margin: 50px 0px 50px;
+  }
+}
+
+.ingredients {
+  background-image: url(../img/ingredients.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ingredients .wrapper {
+  padding: 100px 0 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.ingredients .block {
+  width: 629px;
+  height: 550px;
+  margin-right: 76px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ingredients .text_top {
+  padding-top: 50px;
+  padding-bottom: 24px;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: Yeseva One;
+}
+.ingredients .text_bottom {
+  width: 470px;
+  padding-top: 26px;
+  text-align: center;
+  color: #fff;
+  line-height: 180%;
+  letter-spacing: 0.01em;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Lato;
+}
+.ingredients .radius {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.ingredients .radius .radius_ {
+  width: 115px;
+  height: 115px;
+  border: 5px solid rgba(204, 153, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ingredients .radius img {
+  width: 115px;
+  height: 115px;
+  transform: scale(1.5);
+}
+@media screen and (max-width: 768px) {
+  .ingredients .block {
+    margin-right: 0;
+  }
+  .ingredients .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 490px) {
+  .ingredients .block {
+    width: 368px;
+  }
+  .ingredients .text_bottom {
+    width: 303px;
+    font-size: 16px;
+  }
+  .ingredients .radius {
+    gap: 21px;
+  }
+  .ingredients .radius .radius_ {
+    width: 87px;
+    height: 87px;
+  }
+  .ingredients .radius img {
+    width: 87px;
+    height: 87px;
+  }
+}
+
+.menu {
+  background-color: lightgray;
+  background-image: url(../img/menu.png), linear-gradient(270deg, #FFF 0%, #F3F1F1 100%);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1) inset;
+}
+.menu .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 100px;
+  gap: 30px;
+}
+.menu .menu_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+.menu .menu_item img {
+  margin-top: 24px;
+  width: 250px;
+  height: 23.733px;
+  align-self: center;
+}
+.menu .menu_item .lorem {
+  margin: 25px 65px 0px 65px;
+}
+.menu .menu_item .high {
+  color: #CC9900;
+  text-align: center;
+  font-size: 36px;
+  font-family: Yeseva One;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.menu .menu_item .lorem_special {
+  outline: 1px solid #C89F2D;
+  outline-offset: 5px;
+  position: relative;
+}
+.menu .menu_item .lorem_special::before {
+  content: "Special";
+  width: 85.447px;
+  height: 22px;
+  background-color: #C89F2D;
+  position: absolute;
+  top: -27px;
+  bottom: 0;
+  left: 84.8%;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+.menu .lorem .gold {
+  display: flex;
+  flex-direction: row;
+  gap: 20vh;
+  border-bottom: 1px solid #C89F2D;
+  line-height: 2.5em;
+}
+.menu .lorem .gold5 {
+  text-align: left;
+  color: #C89F2D;
+  font-size: 21px;
+  font-family: Yeseva One;
+  font-weight: 400;
+  font-height: 173.25%;
+}
+.menu .lorem .price {
+  text-align: right;
+  color: #C89F2D;
+  font-size: 21px;
+  font-family: Yeseva One;
+  font-weight: 400;
+  font-height: 173.25%;
+}
+.menu .lorem .gold5_bottom {
+  color: #4C4C4C;
+  font-size: 16px;
+  font-family: Lato;
+  font-weight: 400;
+  line-height: 180%;
+}
+@media screen and (max-width: 920px) {
+  .menu .wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .menu .wrapper {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu .wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu .menu_item .lorem_special::before {
+    left: 74.7%;
+    width: 163.447px;
+  }
+  .menu .lorem .gold {
+    gap: 27vh;
+  }
+}
+@media screen and (max-width: 428px) {
+  .menu .menu_item .lorem_special::before {
+    display: none;
+  }
+  .menu .menu_item .lorem_special {
+    outline: none;
+  }
+  .menu .lorem .gold {
+    width: 330px;
+    gap: 30px;
+  }
+  .menu .lorem .gold5 {
+    font-size: 18px;
+  }
+  .menu .lorem .price {
+    font-size: 16px;
+  }
+}
+
+.reviews {
+  background-image: url(../img/reviews.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.reviews .wrapper {
+  padding: 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews .block {
+  width: 850px;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews .block .high {
+  margin-top: 63px;
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-family: Yeseva One;
+  font-weight: 400;
+}
+.reviews .block .text {
+  width: 690px;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-family: Gentium Book Basic;
+  font-weight: 700;
+  line-height: 173.584%;
+  margin-top: 68px;
+  letter-spacing: 0.01em;
+}
+.reviews .block .food {
+  margin-top: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-family: Gentium Book Basic;
+}
+@media screen and (max-width: 920px) {
+  .reviews .block {
+    width: 708px;
+  }
+}
+@media screen and (max-width: 725px) {
+  .reviews .block {
+    width: 368px;
+    height: 726px;
+  }
+  .reviews .block .text {
+    width: 318px;
   }
 }
 
