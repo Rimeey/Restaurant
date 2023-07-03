@@ -1,0 +1,85 @@
+.footer {
+    background: {
+        color: rgba(0, 0, 0, 0.75);
+    }
+    padding: 50px 75px;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 34px;
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100% / 3);
+            .text_top {
+                color: #fff;
+                text-align: center;
+                font: {
+                    size: 21px;
+                    family: Yeseva One;
+                }
+            }
+            img {
+                margin: 24px 0px 58px;
+            }
+            .text_bottom, pre {
+                color: #fff;
+                text-align: center;
+                font: {
+                    size: 16px;
+                    family: Lato;
+                }
+                line-height: 180%;
+            }
+        }
+        .two {
+            .text_bottom, pre {
+                font-weight: 700;
+            }
+            img {
+                margin: 24px 0px 37px;
+            }
+        }
+        .three {
+            .text_bottom, pre {
+                font-weight: 700;
+            }
+            img {
+                margin: 24px 0px 30px;
+            }
+        }
+    }
+    
+    @include media(768px) {
+        .wrapper {
+            flex-direction: column;
+            gap: 75px;
+        }
+        .wrapper .column {
+            width: 100%;
+        }
+        .wrapper .column .text_bottom {
+            width: calc(100% / 1.5);
+        }
+    }
+    @include media(428px) {
+        .wrapper {
+            gap: 100px;
+        }
+        .wrapper .one {
+            display: none;
+        }
+        .wrapper .two {
+            .text_bottom, pre {
+                font-weight: 400;
+            }
+        }
+        .wrapper .three {
+            .text_bottom, pre {
+                font-weight: 400;
+            }
+        }
+    }
+}

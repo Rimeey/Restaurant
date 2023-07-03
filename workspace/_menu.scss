@@ -12,14 +12,13 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-bottom: 100px;
+        padding: 100px 0px;
         gap: 30px;
     }
     .menu_item {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin-top: 100px;
     }
     .menu_item img {
         margin-top: 24px;
@@ -38,6 +37,8 @@
             family: Yeseva One;
             weight: 400;
         }
+    }
+    .menu_item .high30 {
         margin-top: 30px;
     }
     .menu_item .lorem_special {
@@ -53,7 +54,7 @@
         position: absolute;
         top: -27px;
         bottom: 0;
-        left: 0;
+        left: 85%;
         right: 0;
         color: #fff;
         text-align: center;
@@ -62,8 +63,6 @@
             family: Roboto;
             weight: 400;
         }
-        display: flex;
-        flex-direction:column;
     }
     .lorem .gold {
         display: flex;
@@ -101,32 +100,31 @@
     }
     @include media(920px) {
         .wrapper {
-            width: 90%;
-        }
-    }
-    @include media(840px) {
-        .wrapper {
-            overflow: hidden;
-        }
-    }
-    @include media(768px) {
-        .wrapper {
             flex-direction: column;
             width: 100%;
         }
         .menu_item .lorem_special::before {
             width: 163.447px;
+            left: 75%;
         }
         .lorem .gold {
             gap: 27vh;
         }
     }
-    @include media(428px) {
+    @include media(540px) {
         .menu_item .lorem_special::before {
             display: none;
         }
         .menu_item .lorem_special {
             outline: none;
+        }
+        .wrapper {
+            width: 400px;
+            margin: 0 auto;
+        }
+        .wrapper .menu_item {
+            align-items: center;
+            width: 365px;
         }
         .lorem .gold {
             width: 330px;

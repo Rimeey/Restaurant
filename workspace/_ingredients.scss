@@ -66,16 +66,19 @@
         .block {
             margin-right: 0;
         }
+        .block .text_bottom {
+            width: 529px;
+        }
         .wrapper {
             flex-direction: column;
             align-items: center;
         }
     }
-    @include media(490px) {
+    @include media(660px) {
         .block {
             width: 368px;
         }
-        .text_bottom {
+        .block .text_bottom {
             width: 303px;
             font-size: 16px;
         }

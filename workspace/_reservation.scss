@@ -63,61 +63,79 @@
                 margin: 30px 0px;
             }
         }
-    
-    }
-    form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        input {
-            margin: 19px 15px;
-            padding: 5px;
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            input {
+                margin: 19px 15px;
+                padding: 5px;
+                padding-left: 14px;
+                width: 190px;
+                border: 1px solid $lightgray;
+                outline: none;
+                color: $lightgray;
+                font: {
+                    size: 16px;
+                    family: Lato;
+                    style: italic;
+                    weight: 400;
+                }
+                line-height: 180%;
+            }
+            [placeholder="your name *"] {
+                border: 1px solid $orange;
+            }
+            span {
+                display: inline-block;
+                position: relative;
+            }
+            span::before {
+                position: absolute;
+                top: -2px;
+                bottom: 0;
+                left: 15px;
+                right: 0;
+                color: $lightorange;
+                font: {
+                    size: 14px;
+                    family: Lato;
+                    weight: 700;
+                }
+                line-height: 180%;
+            }
+            .name::before {
+                content: 'Name';
+            }
+            .email::before {
+                content: 'Email';
+            }
+            .date::before {
+                content: 'Date';
+            }
+            .number::before {
+                content: 'Party Number';
+            }
+        }
+        button {
+            align-self: center;
             width: 190px;
-            border: 1px solid $lightgray;
-            outline: none;
-            color: $lightgray;
+            border: 1px solid $lightorange;
+            background-color: $lightorange;
+            padding: 5px 0px;
+            margin-top: 23px;
+            text-align: center;
             font: {
-                size: 16px;
+                size: 14px;
                 family: Lato;
-                style: italic;
-                weight: 400;
             }
             line-height: 180%;
-        }
-        input:nth-child(1) {
-            border: 1px solid $orange;
-        }
-        // ::before {
-        //     content: 'Name';
-        //     width: 50px;
-        //     height: 50px;
-        //     position: absolute;
-        //     top: 0;
-        //     bottom: 0;
-        //     left: 0;
-        //     right: 0;
-        //     border: 2px solid black;
-        // }
-    }
-    button {
-        align-self: center;
-        width: 190px;
-        border: 1px solid $lightorange;
-        background-color: $lightorange;
-        padding: 5px 0px;
-        margin-top: 23px;
-        text-align: center;
-        font: {
-            size: 14px;
-            family: Lato;
-        }
-        line-height: 180%;
-        cursor: pointer;
-        a {
-            color: #fff;
+            cursor: pointer;
+            a {
+                color: #fff;
+            }
         }
     }
-    
 
     @include media(1385px) {
         .appetisers {
@@ -137,9 +155,10 @@
             padding: 100px 30px;
             flex-direction: column;
             align-items: center;
+            gap: 0px;
         }
-        .wrapper form {
-            justify-content: end;
+        .wrapper .appetisers {
+            align-items: center;
         }
         .high {
             margin-top: 76px;
@@ -149,6 +168,26 @@
         }
         .wrapper form input {
             width: 337px;
+        }
+        .appetisers button {
+            width: 338px;
+        }
+    }
+    @include media(750px) {
+        .wrapper .cards {
+            display: none;
+        }
+        .wrapper .appetisers {
+            width: 367px;
+        }
+        .appetisers .text {
+            width: 367px;
+        }
+        .wrapper form {
+            grid-template-columns: 1fr;
+        }
+        .appetisers button {
+            width: 367px;
         }
     }
 }

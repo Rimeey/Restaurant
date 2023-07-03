@@ -68,11 +68,12 @@
             display: none;
         }
         .text .text_bottom {
-            width: 459;
+            width: 399px;
             margin: 74px 0px 74px;
         }
         .text .graph {
             align-self: center;
+            margin: 0;
         }
     }
     @include media(490px) {
