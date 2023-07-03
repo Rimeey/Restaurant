@@ -296,7 +296,7 @@ a {
   position: absolute;
   top: -27px;
   bottom: 0;
-  left: 84.8%;
+  left: 0;
   right: 0;
   color: #fff;
   text-align: center;
@@ -350,7 +350,6 @@ a {
     width: 100%;
   }
   .menu .menu_item .lorem_special::before {
-    left: 74.7%;
     width: 163.447px;
   }
   .menu .lorem .gold {
@@ -434,6 +433,135 @@ a {
   }
   .reviews .block .text {
     width: 318px;
+  }
+}
+
+.reservation {
+  background-color: lightgray;
+  background-image: url(../img/about.png), linear-gradient(270deg, #F4F2F2 0%, #FFF 100%);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1) inset;
+}
+.reservation .wrapper {
+  padding: 100px 75px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.reservation .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.reservation .appetisers {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 80px;
+  width: 630px;
+}
+.reservation .appetisers img {
+  align-self: center;
+  width: 250px;
+  height: 23.733px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.reservation .appetisers .high {
+  align-self: center;
+  color: #CC9900;
+  text-align: center;
+  font-size: 36px;
+  font-family: Yeseva One;
+  font-weight: 400;
+}
+.reservation .appetisers .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 470px;
+}
+.reservation .appetisers .text p {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  font-family: Lato;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.01em;
+}
+.reservation .appetisers .text p:nth-child(2) {
+  margin: 30px 0px;
+}
+.reservation form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.reservation form input {
+  margin: 19px 15px;
+  padding: 5px;
+  width: 190px;
+  border: 1px solid #9B9B9B;
+  outline: none;
+  color: #9B9B9B;
+  font-size: 16px;
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 180%;
+}
+.reservation form input:nth-child(1) {
+  border: 1px solid #CC9900;
+}
+.reservation button {
+  align-self: center;
+  width: 190px;
+  border: 1px solid #C89F2D;
+  background-color: #C89F2D;
+  padding: 5px 0px;
+  margin-top: 23px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Lato;
+  line-height: 180%;
+  cursor: pointer;
+}
+.reservation button a {
+  color: #fff;
+}
+@media screen and (max-width: 1385px) {
+  .reservation .appetisers {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1225px) {
+  .reservation .appetisers .text {
+    width: 350px;
+  }
+  .reservation .appetisers form input {
+    width: 130px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .reservation .wrapper {
+    padding: 100px 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reservation .wrapper form {
+    justify-content: end;
+  }
+  .reservation .high {
+    margin-top: 76px;
+  }
+  .reservation .appetisers .text {
+    width: 470px;
+  }
+  .reservation .wrapper form input {
+    width: 337px;
   }
 }
 
