@@ -12,13 +12,13 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         padding: 100px 0px;
         gap: 30px;
     }
     .menu_item {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
     }
     .menu_item img {
         margin-top: 24px;
@@ -54,7 +54,7 @@
         position: absolute;
         top: -27px;
         bottom: 0;
-        left: 85%;
+        left: calc(101.2% - 85.447px);
         right: 0;
         color: #fff;
         text-align: center;
@@ -98,20 +98,20 @@
         }
         line-height: 180%;
     }
-    @include media(920px) {
+    @include media(1300px) {
         .wrapper {
             flex-direction: column;
             width: 100%;
         }
         .menu_item .lorem_special::before {
             width: 163.447px;
-            left: 75%;
+            left: calc(101.1% - 163.447px);
         }
         .lorem .gold {
             gap: 27vh;
         }
     }
-    @include media(540px) {
+    @include media(690px) {
         .menu_item .lorem_special::before {
             display: none;
         }
